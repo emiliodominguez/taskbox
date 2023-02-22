@@ -1277,7 +1277,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"list-item {{ task.state }}\">\n    <label\n        [attr.aria-label]=\"'archiveTask-' + task.id\"\n        for=\"checked-{{ task.id }}\"\n        class=\"checkbox\"\n    >\n        <input\n            type=\"checkbox\"\n            disabled=\"true\"\n            [defaultChecked]=\"task.state === 'TASK_ARCHIVED'\"\n            name=\"checked-{{ task.id }}\"\n            id=\"checked-{{ task.id }}\"\n        />\n        <span class=\"checkbox-custom\" (click)=\"onArchive(task.id)\"></span>\n    </label>\n    <label\n        [attr.aria-label]=\"task.title + ''\"\n        for=\"title-{{ task.id }}\"\n        class=\"title\"\n    >\n        <input\n            type=\"text\"\n            [value]=\"task.title\"\n            readonly=\"true\"\n            id=\"title-{{ task.id }}\"\n            name=\"title-{{ task.id }}\"\n            placeholder=\"Input title\"\n        />\n    </label>\n    <button\n        *ngIf=\"task.state !== 'TASK_ARCHIVED'\"\n        class=\"pin-button\"\n        [attr.aria-label]=\"'pinTask-' + task.id\"\n        (click)=\"onPin(task.id)\"\n    >\n        <span class=\"icon-star\"></span>\n    </button>\n</div>\n"
+            "templateData": "<div class=\"list-item {{ task.state }}\">\n    <label\n        [attr.aria-label]=\"'archiveTask-' + task.id\"\n        for=\"checked-{{ task.id }}\"\n        class=\"checkbox\"\n    >\n        <input\n            type=\"checkbox\"\n            disabled=\"true\"\n            [defaultChecked]=\"task.state === 'TASK_ARCHIVED'\"\n            name=\"checked-{{ task.id }}\"\n            id=\"checked-{{ task.id }}\"\n        />\n        <span class=\"checkbox-custom\" (click)=\"onArchive(task.id)\"></span>\n    </label>\n    <label\n        [attr.aria-label]=\"task.title + ''\"\n        for=\"title-{{ task.id }}\"\n        class=\"title\"\n    >\n        <input\n            type=\"text\"\n            [value]=\"task.title\"\n            readonly=\"true\"\n            id=\"title-{{ task.id }}\"\n            name=\"title-{{ task.id }}\"\n            placeholder=\"Input title\"\n            style=\"text-overflow: ellipsis\"\n        />\n    </label>\n    <button\n        *ngIf=\"task.state !== 'TASK_ARCHIVED'\"\n        class=\"pin-button\"\n        [attr.aria-label]=\"'pinTask-' + task.id\"\n        (click)=\"onPin(task.id)\"\n    >\n        <span class=\"icon-star\"></span>\n    </button>\n</div>\n"
         },
         {
             "name": "TaskListComponent",
@@ -1689,6 +1689,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "LongTitle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/task/task.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Pinned",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1930,6 +1940,16 @@
                 },
                 {
                     "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/task/task.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LongTitle",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/app/components/task/task.component.stories.ts",
@@ -2474,6 +2494,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/task/task.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LongTitle",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
